@@ -1,80 +1,55 @@
-# Hack Simulation
+# Hack Simulation 
 
-Proyek ini mensimulasikan berbagai teknik hacking seperti cracking password, eksploitasi jaringan, dan pemindaian kerentanannya. Proyek ini dirancang sebagai alat edukasi untuk memahami konsep dasar dalam keamanan siber dan ethical hacking.
+This system simulates various hacking techniques such as password cracking, network exploitation, and vulnerability scanning. It is designed as an educational tool to understand basic concepts in cybersecurity and ethical hacking.
 
-## Gambaran Umum Proyek
+## System Overview
 
-Proyek ini terdiri dari komponen-komponen berikut:
+The system consists of the following components:
 
-1. **Komponen Utama**:
-   - `network.py`: Mensimulasikan pemindaian jaringan dan eksploitasi kerentanan.
-   - `cracker.py`: Mensimulasikan cracking password menggunakan berbagai teknik.
-   - `exploit.py`: Mensimulasikan eksploitasi celah keamanan di sistem target.
+1. **Core Components**:
+   - `network.py`: Simulates network scanning and exploitation of vulnerabilities.
+   - `cracker.py`: Simulates cracking of passwords using different techniques.
+   - `exploit.py`: Simulates exploiting security flaws in the target system.
 
-2. **Modul**:
-   - `scanner.py`: Mensimulasikan pemindaian port terbuka dan kerentanan.
-   - `brute_force.py`: Mengimplementasikan serangan brute-force untuk cracking password.
-   - `keylogger.py`: Mensimulasikan keylogger untuk tujuan edukasi.
+2. **Modules**:
+   - `scanner.py`: Simulates scanning for open ports and vulnerabilities.
+   - `brute_force.py`: Implements a brute force attack for password cracking.
+   - `keylogger.py`: Simulates a keylogger for educational purposes.
 
-3. **Target**:
-   - `server.py`: Mewakili server yang rentan dan dapat dieksploitasi.
-   - `device.py`: Mewakili perangkat yang dapat menjadi sasaran serangan.
+3. **Targets**:
+   - `server.py`: Represents a vulnerable server that can be exploited.
+   - `device.py`: Represents a device that can be targeted for attacks.
 
-4. **Utilitas**:
-   - `logger.py`: Mencatat kemajuan dan peristiwa selama simulasi.
-   - `encryption.py`: Mensimulasikan operasi enkripsi dan dekripsi.
-   - `config.py`: Menyimpan variabel konfigurasi untuk simulasi.
+4. **Utilities**:
+   - `logger.py`: Logs the progress and events during the simulation.
+   - `encryption.py`: Simulates encryption and decryption operations.
+   - `config.py`: Holds configuration variables for the simulation.
 
-5. **Pengujian**:
-   - Tersedia pengujian unit untuk memverifikasi fungsionalitas komponen utama.
+5. **Testing**:
+   - Unit tests are provided to verify the functionality of key components.
 
-## Instalasi
+## Installation
 
-Untuk menjalankan proyek ini, Anda memerlukan Python 3.x terinstal di mesin Anda. Ikuti langkah-langkah berikut:
+To run this project, you'll need Python 3.x installed on your machine. Follow the steps below:
 
-1. **Clone repositori**:
+1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/username/hack_simulation.git
+   git clone https://github.com/yourusername/hack_simulation.git
    cd hack_simulation
 
+2. **Install required dependencies**:
+
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # For Linux/Mac
+   venv\Scripts\activate  # For Windows
+   pip install -r requirements.txt
+
+3. **Running the simulations**
+
+   ```bash
+   python main.py
+   python -m unittest discover tests/
 
 
-## Hasil Output
-
-```yaml
-simulation_output:
-  - timestamp: "2024-12-29T12:00:00"
-    message: "Simulasi dimulai"
-  
-  - timestamp: "2024-12-29T12:01:05"
-    message: "Pemindaian kerentanannya dimulai..."
-  
-  - timestamp: "2024-12-29T12:01:10"
-    message: "Memindai 192.168.1.1 untuk kerentanannya..."
-    vulnerabilities_found: 
-      - "Kerentanan 1"
-      - "Kerentanan 2"
-  
-  - timestamp: "2024-12-29T12:01:15"
-    message: "Kerentanannya ditemukan, mulai eksploitasi..."
-  
-  - timestamp: "2024-12-29T12:01:20"
-    message: "Mengeksploitasi Kerentanan 1 di 192.168.1.1"
-    exploit_success: true
-  
-  - timestamp: "2024-12-29T12:02:00"
-    message: "Serangan brute-force dimulai pada pengguna 'admin' menggunakan passwords.txt"
-  
-  - timestamp: "2024-12-29T12:02:30"
-    message: "Mencoba password: 'password1'"
-  
-  - timestamp: "2024-12-29T12:02:40"
-    message: "Mencoba password: '123456'"
-  
-  - timestamp: "2024-12-29T12:02:50"
-    message: "Mencoba password: 'admin'"
-    password_found: "admin"
-  
-  - timestamp: "2024-12-29T12:03:00"
-    message: "Simulasi selesai dengan sukses."
