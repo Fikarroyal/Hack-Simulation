@@ -1,0 +1,2 @@
+TARGET_IP = "192.168.1.1"
+PASSWORD_LIST_FILE = "passwords.txt"
